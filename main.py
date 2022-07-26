@@ -1,9 +1,9 @@
-import os
-import requests
-from urllib.parse import urlparse
-from dotenv import load_dotenv
-from pathlib import Path
 import argparse
+import os
+
+import requests
+from dotenv import load_dotenv
+from urllib.parse import urlparse
 
 
 def shorten_link(bitlly_token, user_link):
@@ -56,11 +56,11 @@ def is_bitlink(parsed_user_link, bitlly_token):
 
 
 def main():
-    description_program = ('Программа сокращает длинные адреса сайтов,'
-                           ' а если для сайта уже есть короткий адрес'
-                           ' выводит адрес, если вводится короткий адрес,'
-                           ' то возвращается количество кликов по'
-                           ' данной ссылке.')
+    description_program = (
+        'Программа сокращает длинные адреса сайтов, а если для сайта уже есть'
+        ' короткий адрес выводит адрес, если вводится короткий адрес,'
+        ' то возвращается количество кликов по данной ссылке.'
+    )
     parser = argparse.ArgumentParser(description=description_program)
     parser.add_argument(
         'user_link',
